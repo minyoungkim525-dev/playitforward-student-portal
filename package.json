@@ -1,0 +1,29 @@
+{
+  "name": "playitforward-student-portal",
+  "version": "1.0.0",
+  "description": "This is a Flask-based web application for students and parents to access academic and music program information. Built for long-term use with NEON CRM integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "dev": "concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./static/css/main.css --watch\" \"python server.py\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minyoungkim525-dev/playitforward-student-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/minyoungkim525-dev/playitforward-student-portal/issues"
+  },
+  "homepage": "https://github.com/minyoungkim525-dev/playitforward-student-portal#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+  <!-- Welcome Section -->
+  <h1 class="text-5xl text-dark mt-10 mb-12 tracking-normal">Welcome, {{ student.student_name or 'Min' }}!</h1>
+
+  <!-- Music Quote Section -->
+  <div class="text-center">
+    <p class="uppercase text-xs tracking-normal text-dark font-semibold mt-40 mb-4">Welcome</p>
+    <h2 class="text-heading2 font-light mb-6 flex justify-center items-center space-x-3">
+      <span class="text-5xl">🎵 Let’s Make Music Happen This Week!</span>
+    </h2>
+    <p class="text-gray-600 italic text-body mb-15">“Where words fail, music speaks.” – Hans Christian Andersen</p>
+  </div>
+
+  <!-- Info Cards Row -->
+  <div class="grid grid-cols-3 gap-6 mb-40">
+    <!-- Card 1 -->
+    <div class="border rounded-xl border-gray-200 p-5">
+      <h2 class="flex flex-col space-y-2 mb-3">
+        <span class="h-10 w-10 text-accent mb-3">{% include 'icons/chat.svg' %}</span>
+        <span class="text-2xl font-light tracking-normal">Messages</span>
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">Please review the new sheet music<br>Mrs. Johnson</p>
+      <a href="#" class="flex hover:underline space-x-1 items-center mb-2">
+        <span class="text-sm">View  </span>
+        <span class="h-4 w-4">{% include 'icons/>.svg' %}</span>
+      </a>
+    </div>
+    <!-- Card 2 -->
+    <div class="border rounded-xl border-gray-200 p-5">
+      <h2 class="flex flex-col space-y-2 mb-3">
+        <span class="h-10 w-10 text-accent mb-3">{% include 'icons/calendar.svg' %}</span>
+        <span class="text-2xl font-light tracking-normal">Next Lesson</span>
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">Tuesday, July 2<br>3:00 PM – 4:00 PM</p>
+      <a href="#" class="flex hover:underline space-x-1 items-center mb-2">
+        <span class="text-sm">View  </span>
+        <span class="h-4 w-4">{% include 'icons/>.svg' %}</span>
+      </a>
+    </div>                                                           
+    <!-- Card 3 -->
+    <div class="border rounded-xl border-gray-200 p-5">
+      <h2 class="flex flex-col space-y-2 mb-3">
+        <span class="h-10 w-10 text-accent mb-3">{% include 'icons/task.svg' %}</span>
+        <span class="text-2xl font-light tracking-normal">Upcoming<br>Assignments</span>
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">Theory Worksheet: Major Scales<br>Due Thursday, July 4 – Submit via Google Drive</p>
+      <a href="#" class="flex hover:underline space-x-1 items-center mb-2">
+        <span class="text-sm">View  </span>
+        <span class="h-4 w-4">{% include 'icons/>.svg' %}</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Events Section -->
+  <div class="w-4/5 max-w-4/5 mx-auto mb-40">
+    <div class="text-center mb-15">
+      <h2 class="text-5xl mb-5">Events</h2>
+      <p class="text-gray-600 mb-12">List of events and extracurriculars</p>
+      <button class="px-3 py-2 text-sm border rounded border-gray-200 hover:bg-gray-50">View All</button>
+    </div>
+
+    <!-- Event List -->
+    <div class="border-y flex flex-col gap-5 divide-y divide-gray-200 justify-evenly border-gray-200 py-5 px-2">
+      <!-- Event 1 -->
+      <div class="flex items-center justify-between pb-8">
+        <div class="flex space-x-6">
+          <img src="{{ url_for('static', filename='images/event1.jpg') }}" alt="Event" class="h-32 w-32 object-cover rounded-md">
+          <div>
+            <h3 class="text-xl mb-2 flex items-center">
+              🇫🇷 Supper Club 
+              <span class="ml-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Sold Out</span>
+            </h3>
+            <p class="text-gray-600 text-sm">Sat 20 Sep 2025 • The Loft @ 8th Ave</p>
+            <p class="text-gray-700 mt-3 text-sm">Make a Difference in a Child's Life!<br>Mini recital by our young musicians — French-inspired cuisine.</p>
+          </div>
+        </div>
+        <button class="px-4 py-2 text-sm border rounded-xs border-gray-200 hover:bg-gray-50">View Details</button>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="flex items-center justify-between pb-8">
+        <div class="flex space-x-6">
+          <img src="{{ url_for('static', filename='images/event2.jpg') }}" alt="Event" class="h-32 w-32 object-cover rounded-md">
+          <div>
+            <h3 class="text-xl mb-2 flex items-center">🎤 Summer Showcase</h3>
+            <p class="text-gray-600 text-sm">Sat 10 Feb 2025 • P.S. 118 Auditorium</p>
+            <p class="text-gray-700 mt-3 text-sm">Biggest student concert of the year — family & friends welcome.</p>
+          </div>
+        </div>
+        <button class="px-4 py-2 text-sm border rounded-xs border-gray-200 hover:bg-gray-50">View Details</button>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="flex items-center justify-between">
+        <div class="flex space-x-6">
+          <img src="{{ url_for('static', filename='images/event3.jpg') }}" alt="Event" class="h-32 w-32 object-cover rounded-md">
+          <div>
+            <h3 class="text-xl mb-2 flex items-center">🎨 Music & Art Club: Summer Zines</h3>
+            <p class="text-gray-600 text-sm">Sun 11 Feb 2025 • Virtual on Google Meet</p>
+            <p class="text-gray-700 mt-3 text-sm">Combine music and art by designing your own music-themed zine.</p>
+          </div>
+        </div>
+        <button class="px-4 py-2 text-sm border rounded-xs border-gray-200 hover:bg-gray-50">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parent View Toggle -->
+  <div class="mb-20">
+    <h3 class="text-4xl text-dark mt-20 mb-5 tracking-normal">Switch to Parent's View</h3>
+    <p class="text-gray-600 mb-5">Access your child’s progress and updates.</p>
+    <button class="px-6 py-2 text-sm bg-green-500 rounded-card hover:brightness-90">Toggle</button>
+  </div>
+{% endblock %}

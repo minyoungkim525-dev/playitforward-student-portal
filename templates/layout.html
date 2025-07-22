@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Student Portal{% endblock %}</title>
+  <!-- Compiled Tailwind CSS -->
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+<body class="bg-light text-dark font-sans min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow-card">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <!-- Logo (Larger) -->
+      <div class="flex items-center space-x-4">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Play It Forward" class="h-10 w-auto">
+      </div>
+
+      <!-- Navigation + Actions in One Row -->
+      <div class="flex items-center space-x-8">
+        <!-- Navigation Links -->
+        <nav class="flex space-x-8 text-gray-600 text-sm font-medium">
+          <a href="/" class="hover:text-primary">Dashboard</a>
+          <a href="/calendar" class="hover:text-primary">Calendar</a>
+          <a href="/assignments" class="hover:text-primary">Assignments</a>
+          <!-- Resources Dropdown -->
+          <div class="relative group">
+            <button class="hover:text-primary">Resources ▾</button>
+            <div class="hidden group-hover:block absolute mt-2 bg-white border rounded-card shadow-card text-sm w-40">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-50">Resource 1</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-50">Resource 2</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Action Buttons (Aligned with Nav) -->
+        <div class="flex space-x-4">
+          <button class="px-4 py-2 border rounded-card text-sm hover:brightness-90">Logout</button>
+          <button class="px-4 py-2 bg-green-500 text-white rounded-card text-sm shadow-card hover:bg-green-600">Help</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-7xl mx-auto px-6 py-12">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+<footer class="bg-[#231F20] text-white py-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+
+    <!-- Logo + Credits -->
+    <div>
+      <img src="{{ url_for('static', filename='images/logowhite.svg') }}" alt="Play It Forward" class="h-16 mb-4">
+      <!-- <p class="text-sm text-gray-400">
+        Site Designed, Built & Powered by 
+        <a href="#" class="text-teal-400 hover:underline">Carpe Viam Marketing Group</a>
+      </p> -->
+      <p class="text-sm italic mt-2 text-gray-300">2025 Play It Forward.</p>
+    </div>
+
+    <!-- Phone & Email -->
+    <div>
+      <h3 class="text-orange-400 mb-1">PHONE & EMAIL</h3>
+      <p class="text-gray-300 text-sm">503-746-1080</p>
+      <p class="text-gray-300 text-sm">marietta@pifmusic.org</p>
+
+      <h3 class="text-orange-400 mt-6 mb-1">OFFICE HOURS</h3>
+      <p class="text-gray-300 text-sm">M–F: 8am – 5pm</p>
+    </div>
+
+    <!-- Address -->
+    <div>
+      <h3 class="text-orange-400 mb-1">ADDRESS</h3>
+      <p class="text-gray-300 text-sm">
+        P.O. Box 25607<br>Portland, OR 97298
+      </p>
+
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="text-gray-400 hover:text-white">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <i class="fab fa-facebook text-xl"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <i class="fab fa-youtube text-xl"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div>
+      <h3 class="mb-4">STAY IN THE KNOW, JOIN OUR MAGIC!</h3>
+      <form class="flex flex-col space-y-3">
+        <input type="email" placeholder="Email" class="px-4 py-2 rounded bg-white text-gray-900">
+        <button type="submit" class="px-4 py-2 bg-gray-500 hover:bg-gray-600 rounded">Send</button>
+      </form>
+      <p class="text-xs text-gray-400 mt-3">
+        2025 Play It Forward
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="http://127.0.0.1:35729/livereload.js"></script>
+</body>
+</html>

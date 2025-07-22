@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Grades{% endblock %}
+{% block content %}
+  <h2 class="text-3xl font-bold mb-8">Grades Overview</h2>
+
+  <div class="bg-white rounded-card shadow-card overflow-hidden">
+    <table class="w-full text-left border-collapse">
+      <thead class="bg-light">
+        <tr>
+          <th class="px-6 py-3 text-gray-600 text-sm">Category</th>
+          <th class="px-6 py-3 text-gray-600 text-sm">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t">
+          <td class="px-6 py-4">Theory</td>
+          <td class="px-6 py-4">{{ student.grades.theory }}</td>
+        </tr>
+        <tr class="border-t">
+          <td class="px-6 py-4">Posture</td>
+          <td class="px-6 py-4">{{ student.grades.posture }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Assignments{% endblock %}
+{% block content %}
+  <h2 class="text-3xl font-bold mb-8">Current Assignments</h2>
+
+  <ul class="space-y-4">
+    {% for assignment in student.assignments %}
+    <li class="bg-white p-4 rounded-card shadow-card flex justify-between items-center">
+      <div>
+        <p class="font-medium">{{ assignment.title }}</p>
+        <p class="text-sm text-gray-500">Due: {{ assignment.due }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

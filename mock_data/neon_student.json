@@ -1,0 +1,19 @@
+{
+  "student_name": "Alex Rivera",
+  "email": "alex@example.com",
+  "grades": {
+    "theory": "A",
+    "posture": "B+"
+  },
+  "attendance": "95%",
+  "events": [
+    "Spring Recital – June 15",
+    "Club Meeting – June 22"
+  ],
+  "assignments": [
+    { "title": "Etude in G", "due": "2025-07-21" },
+    { "title": "Theory Worksheet", "due": "2025-07-18" }
+  ],
+  "instrument": "Violin",
+  "lesson_policy": "Students must notify instructors 24 hours in advance to reschedule."
+}
