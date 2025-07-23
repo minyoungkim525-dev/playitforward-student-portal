@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: playitforward-student-portal
+    env: python
+    plan: free # Or "starter", "standard" depending on your plan
+    buildCommand: |
+      pip install -r requirements.txt
+      npm install
+      npx @tailwindcss/cli -i ./src/input.css -o ./static/css/main.css
+    startCommand: gunicorn server:app
+    envVars:
+      FLASK_ENV: production
+      PYTHON_VERSION: 3.12.4 # Or whichever version you're using locally
+      NODE_VERSION: 22.16.0 # Matches your Render build logs
+    autoDeploy: true
+    region: oregon # You can change region if needed
