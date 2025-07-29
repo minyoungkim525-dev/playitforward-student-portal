@@ -3,3 +3,10 @@ __pycache__/
 .env
 node_modules/
 static/css/main.css
+
+# MacOS system files
+.DS_Store
+static/.DS_Store
+static/images/.DS_Store
+templates/.DS_Store
+templates/icons/.DS_Store
