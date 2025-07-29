@@ -46,29 +46,6 @@ This project extends the organization’s existing WordPress site with a dedicat
 
 ---
 
-## 📂 Project Structure
-
-playitforward-student-portal/
-│
-├── server.py # Flask app & routes (staging features planned)
-├── models.py # SQLAlchemy models (Materials, etc.)
-├── templates/ # All HTML templates (with Jinja2)
-│ ├── layout.html
-│ ├── dashboard.html
-│ ├── calendar.html
-│ ├── course-materials.html
-│ ├── admin-dashboard.html
-│ └── ...
-├── static/
-│ ├── css/main.css # Tailwind-compiled styles
-│ ├── images/ # Static assets (gallery, logos)
-│ └── icons/ # SVG icons
-├── mock_data/ # Sample student JSON (for testing)
-├── requirements.txt # Project dependencies
-├── Procfile # For Render deployment
-└── render.yaml # Staging + Production setup
-
----
 
 ## 🌐 Deployment
 
