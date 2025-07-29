@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Student Showcase{% endblock %}
+
+{% block content %}
+  <h1 class="text-5xl text-dark mt-10 mb-12 tracking-normal">Student Showcase</h1>
+
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-light tracking-tight mt-40 mb-4">Photo Gallery</h2>
+    <p class="text-gray-600">Explore moments from our classes and summer camps.</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+    {% for image in gallery_images %}
+      <img src="{{ url_for('static', filename=image) }}" alt="Gallery Image {{ loop.index }}" class="rounded-lg object-cover w-full h-64">
+    {% else %}
+      <p class="col-span-full text-center text-gray-500">No photos available yet.</p>
+    {% endfor %}
+  </div>
+
+  <div class="text-center space-x-4">
+    <button class="px-6 py-3 bg-green-500 text-white rounded shadow hover:bg-green-600">Upload</button>
+    <button class="px-6 py-3 border rounded hover:bg-gray-100">View Gallery</button>
+  </div>
+{% endblock %}

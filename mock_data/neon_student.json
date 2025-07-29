@@ -1,11 +1,21 @@
 {
   "student_name": "Alex Rivera",
   "email": "alex@example.com",
+  "instrument": "Violin",
+  "attendance": "95%",
   "grades": {
     "theory": "A",
     "posture": "B+"
   },
-  "attendance": "95%",
+  "teacher": {
+    "name": "Mrs. A. Johnson",
+    "subjects": ["Violin", "Music Theory"],
+    "email": "ajohnson@pifmusic.org"
+  },
+  "contacts": {
+    "parent": { "name": "Jamie Kim", "phone": "(917) 555-1234" },
+    "doctor": { "name": "Dr. Park", "phone": "(212) 555-0101" }
+  },
   "events": [
     "Spring Recital – June 15",
     "Club Meeting – June 22"
@@ -14,6 +24,5 @@
     { "title": "Etude in G", "due": "2025-07-21" },
     { "title": "Theory Worksheet", "due": "2025-07-18" }
   ],
-  "instrument": "Violin",
   "lesson_policy": "Students must notify instructors 24 hours in advance to reschedule."
 }

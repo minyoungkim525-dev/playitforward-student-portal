@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "dev": "concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./static/css/main.css --watch\" \"python server.py\""
+    "dev": "concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./static/css/main.css --watch\" \"FLASK_ENV=development python server.py\"",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./static/css/main.css",
+    "start": "gunicorn server:app"
   },
   "repository": {
     "type": "git",
